@@ -63,13 +63,13 @@ sudo core-gui
 
 The scenario for this simulation involved a router connected to a switch, which was then connected to three nodes.
 
-When the scenario is active, double-click on the nodes
+When the scenario is active, double-click on the nodes. 
 Let X be a node num:
 ```
 root@nX
 ```
 
-su over to an admin profile:
+`su` over to an admin profile:
 ```
 su <profile_name>
 ```
@@ -84,27 +84,25 @@ DEFINE environmental variable:
 export ION_NODE_LIST_DIR=/tmp
 ```
 
-Copy over runcontrol + ionconfig files 
+Copy over runcontrol + ionconfig files.
 Within the file directory, let X be a CORE host num:
 ```
 cp host20.rc /tmp/pycore.1/nX.conf/
 cp host20.ionconfig /tmp/pycore.1/nX.conf/
 ```
 
-Run ION scenarios
-Let X be a host num:
+Run ION scenarios. Let X be a host num:
 ```
 ionstart -I hostX.rc
 ```
 
-Start node communication
-Let X be a host num:
+Start node communication. Let X be a host num:
 ```
 bpchat ipn:X.1 ipn:X.1 ipn:X.1
 ```
 
 # References
-`Special thanks to David Cook for debugging and installation :catdance:`
+`Special thanks to David Cook for debugging and installation assistance :catdance:`
 - ION-DTN Github: [https://github.com/nasa-jpl/ION-DTN](https://github.com/nasa-jpl/ION-DTN)
 - ION-DTN Official Documentation: [https://nasa-jpl.github.io/ION-DTN/](https://nasa-jpl.github.io/ION-DTN/)
 - CORE Emulator: [https://github.com/coreemu/core](https://github.com/coreemu/core)
