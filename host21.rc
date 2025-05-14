@@ -1,0 +1,48 @@
+## begin ionadmin
+1 21 host21.ionconfig
+s
+
+
+a contact +1 +3600 21 20 100000
+a contact +1 +3600 20 21 100000
+a contact +1 +3600 21 22 100000
+a contact +1 +3600 22 21 100000
+
+a range +1 +3600 21 21 1
+a range +1 +3600 21 20 1
+a range +1 +3600 20 21 1
+a range +1 +3600 20 20 1
+a range +1 +3600 21 22 1
+a range +1 +3600 22 21 1
+
+m production 1000000
+m consumption 1000000
+## end ionadmin
+
+## begin ltpadmin
+1 32
+a span 21 32 32 1400 10000 1 'udplso 10.0.0.21:1113' 300
+a span 20 32 32 1400 10000 1 'udplso 10.0.0.20:1113' 300
+a span 22 32 32 1400 10000 1 'udplso 10.0.0.22:1113' 300
+s 'udplsi 10.0.0.21:1113'
+## end ltpadmin
+
+## begin bpadmin
+1
+a scheme ipn 'ipnfw' 'ipnadminep'
+a endpoint ipn:21.0 q
+a endpoint ipn:21.1 q
+a endpoint ipn:21.2 q
+a protocol ltp 1400 100
+a induct ltp 21 ltpcli
+a outduct ltp 21 ltpclo
+a outduct ltp 20 ltpclo
+a outduct ltp 22 ltpclo
+s
+## end bpadmin
+
+## begin ipnadmin
+a plan 20 ltp/20
+a plan 21 ltp/21
+a plan 22 ltp/22
+## end ipnadmin
