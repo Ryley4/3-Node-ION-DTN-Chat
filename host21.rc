@@ -2,16 +2,13 @@
 1 21 host21.ionconfig
 s
 
-
 a contact +1 +3600 21 20 100000
 a contact +1 +3600 20 21 100000
 a contact +1 +3600 21 22 100000
 a contact +1 +3600 22 21 100000
 
-a range +1 +3600 21 21 1
 a range +1 +3600 21 20 1
 a range +1 +3600 20 21 1
-a range +1 +3600 20 20 1
 a range +1 +3600 21 22 1
 a range +1 +3600 22 21 1
 
