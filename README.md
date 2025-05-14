@@ -1,6 +1,6 @@
 # ION-DTN + CORE 3-Node Chat Simulation
 
-This repository documents and demonstrates a 3-node Delay Tolerant Network (DTN) chat setup using NASA's ION-DTN and the CORE network emulator. Messages are sent using the Bundle Protocol over LTP/UDP to simulate resilient communications in high-delay or disconnected conditions. This project is scalable to multiple nodes, but for the purpose of my capstone project, it will be configured as a 3-node setup.
+This repository documents and demonstrates a 3-node Delay Tolerant Network (DTN) chat setup using NASA's ION-DTN and the CORE network emulator. Messages are sent using the Bundle Protocol over LTP/UDP to simulate resilient communications in high-delay or disconnected conditions. This project was developed as a computer science capstone under Dr. Ronny L. Bull. While it is scalable to multiple nodes, this implementation demonstrates the architecture using a 3-node scenario.
 
 The lab workstation was running Ubuntu 24.04 at the time of installation and testing.
 
